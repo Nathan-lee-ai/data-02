@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>INFRAME INTERIOR | 인천 인테리어 전문기업</title>
+  <meta name="description" content="인천을 중심으로 전국 시공 서비스를 제공하는 프리미엄 인테리어 전문기업">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Nanum Gothic", sans-serif;
+      color: #111827;
+      background: #fff;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    :root {
+      --navy: #071a35;
+      --navy2: #0c274d;
+      --blue: #1557d6;
+      --blue-light: #3777ea;
+      --white: #ffffff;
+      --gray: #f4f6f9;
+      --gray2: #e8edf4;
+      --text: #172033;
+      --muted: #687386;
+      --max-width: 1280px;
+    }
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 82px;
+      z-index: 1000;
+      transition: .4s;
+    }
+
+    header.scrolled {
+      background: rgba(7, 26, 53, .96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 5px 30px rgba(0,0,0,.15);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      height: 100%;
+      margin: auto;
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #4d8cff;
+    }
+
+    nav {
+      display: flex;
+      gap: 35px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a {
+      opacity: .85;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: #6fa0ff;
+    }
+
+    .header-btn {
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .header-btn:hover {
+      background: #3475ed;
+      transform: translateY(-2px);
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      height: 100vh;
+      min-height: 700px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg,
+          rgba(3,15,32,.92) 0%,
+          rgba(3,15,32,.70) 45%,
+          rgba(3,15,32,.15) 100%),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: var(--max-width);
+      width: 100%;
+      margin: auto;
+      padding: 0 30px;
+    }
+
+    .hero-label {
+      color: #6fa0ff;
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 6vw, 82px);
+      line-height: 1.15;
+      letter-spacing: -4px;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: #4380f4;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: rgba(255,255,255,.78);
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 30px;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #3475ed;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(21,87,214,.35);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      letter-spacing: 3px;
+      opacity: .6;
+    }
+
+    /* =====================================================
+       SIDE NAV
+    ===================================================== */
+
+    .side-nav {
+      position: fixed;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .side-nav a {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.5);
+      position: relative;
+      transition: .3s;
+    }
+
+    .side-nav a::after {
+      content: attr(data-label);
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 11px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .side-nav a:hover::after,
+    .side-nav a.active::after {
+      opacity: 1;
+    }
+
+    .side-nav a.active {
+      background: #4380f4;
+      transform: scale(1.5);
+    }
+
+    /* =====================================================
+       COMMON
+    ===================================================== */
+
+    section {
+      padding: 130px 30px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.25;
+      letter-spacing: -2px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 25px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 16px;
+    }
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 560px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-text .big-copy {
+      font-size: 25px;
+      line-height: 1.6;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 30px 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .stat {
+      border-top: 2px solid var(--blue);
+      padding-top: 18px;
+    }
+
+    .stat strong {
+      font-size: 35px;
+      color: var(--navy);
+      display: block;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* =====================================================
+       SERVICE
+    ===================================================== */
+
+    .service {
+      background: var(--gray);
+    }
+
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 60px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 1px;
+      background: var(--gray2);
+    }
+
+    .service-card {
+      background: white;
+      padding: 45px 32px;
+      min-height: 280px;
+      transition: .4s;
+      position: relative;
+    }
+
+    .service-card:hover {
+      background: var(--navy);
+      color: white;
+      transform: translateY(-8px);
+      z-index: 2;
+      box-shadow: 0 20px 40px rgba(0,0,0,.12);
+    }
+
+    .service-number {
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: 800;
+      margin-bottom: 55px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .service-card:hover p {
+      color: rgba(255,255,255,.65);
+    }
+
+    /* =====================================================
+       PORTFOLIO
+    ===================================================== */
+
+    .portfolio {
+      background: white;
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 45px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+    }
+
+    .filter {
+      border: 1px solid var(--gray2);
+      background: white;
+      padding: 10px 18px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: .3s;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 25px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      height: 480px;
+    }
+
+    .portfolio-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: 1s;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 35px;
+      color: white;
+      background: linear-gradient(transparent, rgba(0,0,0,.8));
+    }
+
+    .portfolio-overlay span {
+      font-size: 11px;
+      color: #76a2ff;
+    }
+
+    .portfolio-overlay h3 {
+      font-size: 25px;
+      margin-top: 5px;
+    }
+
+    /* =====================================================
+       PROCESS
+    ===================================================== */
+
+    .process {
+      background: var(--navy);
+      color: white;
+    }
+
+    .process .section-title {
+      color: white;
+    }
+
+    .process .section-description {
+      color: rgba(255,255,255,.6);
+    }
+
+    .process-grid {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+    }
+
+    .process-item {
+      border-top: 1px solid rgba(255,255,255,.2);
+      padding: 30px 15px;
+      position: relative;
+    }
+
+    .process-item::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      background: var(--blue);
+      border-radius: 50%;
+      position: absolute;
+      top: -5px;
+      left: 15px;
+    }
+
+    .process-number {
+      color: #4380f4;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 35px;
+    }
+
+    .process-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .process-item p {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* =====================================================
+       WHY
+    ===================================================== */
+
+    .why {
+      background: var(--gray);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      margin-top: 60px;
+    }
+
+    .why-list {
+      border-top: 1px solid #ccd3dd;
+    }
+
+    .why-item {
+      padding: 25px 0;
+      border-bottom: 1px solid #ccd3dd;
+      display: flex;
+      gap: 25px;
+    }
+
+    .why-item strong {
+      color: var(--blue);
+      width: 40px;
+    }
+
+    .why-item h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .why-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .why-image {
+      height: 500px;
+    }
+
+    .why-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =====================================================
+       REVIEW
+    ===================================================== */
+
+    .review {
+      background: white;
+      text-align: center;
+    }
+
+    .review-slider {
+      max-width: 850px;
+      margin: 60px auto 0;
+      position: relative;
+      min-height: 220px;
+    }
+
+    .review-item {
+      display: none;
+    }
+
+    .review-item.active {
+      display: block;
+      animation: fadeIn .6s;
+    }
+
+    .review-quote {
+      font-size: 25px;
+      line-height: 1.8;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .review-author {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .review-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 35px;
+    }
+
+    .review-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ccd3dd;
+      cursor: pointer;
+    }
+
+    .review-dot.active {
+      background: var(--blue);
+    }
+
+    /* =====================================================
+       CONTACT CTA
+    ===================================================== */
+
+    .contact {
+      background:
+        linear-gradient(90deg, rgba(7,26,53,.97), rgba(7,26,53,.75)),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact .section-description {
+      color: rgba(255,255,255,.65);
+    }
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      color: var(--text);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid #dce1e8;
+      padding: 13px;
+      outline: none;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: 0;
+      padding: 16px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .form-submit:hover {
+      background: #3475ed;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background: #040f20;
+      color: rgba(255,255,255,.5);
+      padding: 50px 30px;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      color: white;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    /* =====================================================
+       ANIMATION
+    ===================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media(max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .header-btn {
+        display: none;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      section {
+        padding: 90px 20px;
+      }
+
+      .about-grid,
+      .contact-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .about-image {
+        height: 400px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item {
+        height: 400px;
+      }
+
+      .service-header,
+      .portfolio-header {
+        display: block;
+      }
+
+      .filters {
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .stats {
+        gap: 10px;
+      }
+
+      .stat strong {
+        font-size: 27px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+    }
+
+    @media(max-width: 600px) {
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 220px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 25px;
+      }
+
+      .review-quote {
+        font-size: 19px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header id="header">
+
+  <div class="header-inner">
+
+    <a href="#home" class="logo">
+      INFRAME<span>.</span>
+    </a>
+
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#about">COMPANY</a>
+      <a href="#service">SERVICE</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#process">PROCESS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a href="#contact" class="header-btn">
+      무료 상담
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     SIDE BOOKMARK
+===================================================== -->
+
+<div class="side-nav">
+
+  <a href="#home" data-label="HOME"></a>
+  <a href="#about" data-label="COMPANY"></a>
+  <a href="#service" data-label="SERVICE"></a>
+  <a href="#portfolio" data-label="PORTFOLIO"></a>
+  <a href="#process" data-label="PROCESS"></a>
+  <a href="#why" data-label="WHY US"></a>
+  <a href="#review" data-label="REVIEW"></a>
+  <a href="#contact" data-label="CONTACT"></a>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content reveal">
+
+    <div class="hero-label">
+      PREMIUM INTERIOR DESIGN
+    </div>
+
+    <h1>
+      공간의 가치를<br>
+      <span>새롭게 디자인하다.</span>
+    </h1>
+
+    <p class="hero-description">
+      인천을 중심으로 전국 어디에서나 만나는
+      프리미엄 인테리어 디자인과 책임시공.
+      공간의 시작부터 완성까지 INFRAME이 함께합니다.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#portfolio" class="btn btn-primary">
+        시공 사례 보기
+      </a>
+
+      <a href="#contact" class="btn btn-outline">
+        무료 상담 신청
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="scroll-down">
+    SCROLL DOWN
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-image reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
+          alt="프리미엄 인테리어"
+        >
+
+      </div>
+
+      <div class="about-text reveal">
+
+        <div class="section-label">
+          ABOUT INFRAME
+        </div>
+
+        <h2 class="section-title">
+          디자인을 넘어<br>
+          공간의 경험을 만듭니다.
+        </h2>
+
+        <p class="big-copy">
+          좋은 인테리어는 아름다운 공간을 만드는 것을 넘어
+          그 공간에서 살아가는 사람의 일상을 변화시킵니다.
+        </p>
+
+        <p class="section-description">
+          INFRAME INTERIOR는 공간 디자인, 설계, 시공,
+          스타일링까지 하나의 시스템으로 제공하는
+          종합 인테리어 전문기업입니다.
+        </p>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong class="counter" data-target="15">0</strong>
+            <span>YEARS EXPERIENCE</span>
+          </div>
+
+          <div class="stat">
+            <strong>
+              <span class="counter" data-target="12000">0</span>+
+            </strong>
+            <span>PROJECTS</span>
+          </div>
+
+          <div class="stat">
+            <strong>
+              <span class="counter" data-target="98">0</span>%
+            </strong>
+            <span>CUSTOMER SATISFACTION</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICE
+===================================================== -->
+
+<section class="service" id="service">
+
+  <div class="container">
+
+    <div class="service-header reveal">
+
+      <div>
+
+        <div class="section-label">
+          OUR SERVICE
+        </div>
+
+        <h2 class="section-title">
+          공간에 맞는<br>
+          최적의 솔루션
+        </h2>
+
+      </div>
+
+      <p class="section-description">
+        주거공간부터 상업공간까지<br>
+        프로젝트의 목적과 라이프스타일을 분석하여
+        최적의 디자인을 제안합니다.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid reveal">
+
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>아파트 인테리어</h3>
+        <p>
+          라이프스타일을 반영한
+          맞춤형 아파트 공간 디자인
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>주택 인테리어</h3>
+        <p>
+          가족의 생활과 건축 구조를
+          고려한 프리미엄 주거공간
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>상업공간</h3>
+        <p>
+          브랜드 아이덴티티와 고객 경험을
+          연결하는 공간 디자인
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <h3>리모델링</h3>
+        <p>
+          기존 공간의 문제를 분석하고
+          새로운 가치를 부여합니다.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
+<section class="portfolio" id="portfolio">
+
+  <div class="container">
+
+    <div class="portfolio-header reveal">
+
+      <div>
+
+        <div class="section-label">
+          PORTFOLIO
+        </div>
+
+        <h2 class="section-title">
+          우리가 만든<br>
+          아름다운 공간
+        </h2>
+
+      </div>
+
+      <div class="filters">
+
+        <button class="filter active" data-filter="all">
+          ALL
+        </button>
+
+        <button class="filter" data-filter="residential">
+          RESIDENTIAL
+        </button>
+
+        <button class="filter" data-filter="commercial">
+          COMMERCIAL
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item reveal"
+           data-category="residential">
+
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85"
+          alt="아파트 인테리어"
+        >
+
+        <div class="portfolio-overlay">
+          <span>RESIDENTIAL</span>
+          <h3>송도 84㎡ 아파트</h3>
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-item reveal"
+           data-category="commercial">
+
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+          alt="오피스 인테리어"
+        >
+
+        <div class="portfolio-overlay">
+          <span>COMMERCIAL</span>
+          <h3>판교 프리미엄 오피스</h3>
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-item reveal"
+           data-category="residential">
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85"
+          alt="주거 인테리어"
+        >
+
+        <div class="portfolio-overlay">
+          <span>RESIDENTIAL</span>
+          <h3>청라 112㎡ 아파트</h3>
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-item reveal"
+           data-category="commercial">
+
+        <img
+          src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=85"
+          alt="상업공간"
+        >
+
+        <div class="portfolio-overlay">
+          <span>COMMERCIAL</span>
+          <h3>인천 브랜드 카페</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section class="process" id="process">
+
+  <div class="container">
+
+    <div class="reveal">
+
+      <div class="section-label">
+        OUR PROCESS
+      </div>
+
+      <h2 class="section-title">
+        처음 상담부터<br>
+        완벽한 완공까지.
+      </h2>
+
+      <p class="section-description">
+        체계적인 프로세스를 통해 불필요한 비용과 시간을 줄이고
+        고객이 원하는 공간을 정확하게 구현합니다.
+      </p>
+
+    </div>
+
+
+    <div class="process-grid reveal">
+
+      <div class="process-item">
+        <div class="process-number">STEP 01</div>
+        <h3>상담</h3>
+        <p>고객의 요구사항과 라이프스타일 분석</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">STEP 02</div>
+        <h3>실측</h3>
+        <p>현장 방문 및 공간 정밀 측정</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">STEP 03</div>
+        <h3>디자인</h3>
+        <p>컨셉 및 3D 디자인 제안</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">STEP 04</div>
+        <h3>견적</h3>
+        <p>투명하고 상세한 견적 안내</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">STEP 05</div>
+        <h3>시공</h3>
+        <p>전문 시공팀의 책임 시공</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">STEP 06</div>
+        <h3>A/S</h3>
+        <p>완공 이후까지 책임지는 관리</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section class="why" id="why">
+
+  <div class="container">
+
+    <div class="reveal">
+
+      <div class="section-label">
+        WHY INFRAME
+      </div>
+
+      <h2 class="section-title">
+        우리가 다른 이유
+      </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+      <div class="why-list reveal">
+
+        <div class="why-item">
+
+          <strong>01</strong>
+
+          <div>
+            <h3>투명한 견적</h3>
+            <p>
+              공사 항목과 비용을 투명하게 공개하여
+              불필요한 추가 비용을 최소화합니다.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="why-item">
+
+          <strong>02</strong>
+
+          <div>
+            <h3>전문 디자인</h3>
+            <p>
+              전문 디자이너가 고객의 라이프스타일과
+              공간의 특성을 분석합니다.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="why-item">
+
+          <strong>03</strong>
+
+          <div>
+            <h3>책임 시공</h3>
+            <p>
+              검증된 전문 시공팀이 프로젝트 전 과정을
+              책임지고 관리합니다.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="why-item">
+
+          <strong>04</strong>
+
+          <div>
+            <h3>철저한 A/S</h3>
+            <p>
+              완공 이후에도 지속적인 관리와
+              고객 지원을 제공합니다.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="why-image reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
+          alt="인테리어 디자인"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     REVIEW
+===================================================== -->
+
+<section class="review" id="review">
+
+  <div class="container">
+
+    <div class="section-label">
+      CUSTOMER REVIEW
+    </div>
+
+    <h2 class="section-title">
+      고객이 직접 말하는<br>
+      INFRAME
+    </h2>
+
+
+    <div class="review-slider">
+
+      <div class="review-item active">
+
+        <p class="review-quote">
+          "처음 상담부터 완공까지 정말 체계적이었습니다.
+          우리가 원했던 분위기를 정확하게 구현해주셔서
+          가족 모두 만족하고 있습니다."
+        </p>
+
+        <div class="review-author">
+          송도 / 40평대 아파트 / 김○○ 고객
+        </div>
+
+      </div>
+
+
+      <div class="review-item">
+
+        <p class="review-quote">
+          "견적이 투명하고 디자인 제안도 구체적이어서
+          다른 업체와 비교했을 때 신뢰감이 가장 컸습니다."
+        </p>
+
+        <div class="review-author">
+          청라 / 30평대 아파트 / 박○○ 고객
+        </div>
+
+      </div>
+
+
+      <div class="review-item">
+
+        <p class="review-quote">
+          "상업공간의 특성을 잘 이해하고 브랜드 이미지까지
+          공간에 녹여주셔서 매장 만족도가 크게 올라갔습니다."
+        </p>
+
+        <div class="review-author">
+          인천 / 카페 / 이○○ 대표
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="review-dots">
+
+      <span class="review-dot active"></span>
+      <span class="review-dot"></span>
+      <span class="review-dot"></span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="reveal">
+
+        <div class="section-label">
+          CONTACT US
+        </div>
+
+        <h2 class="section-title">
+          당신의 공간을<br>
+          이야기해주세요.
+        </h2>
+
+        <p class="section-description">
+          간단한 상담 신청만 남겨주세요.
+          전문 상담사가 프로젝트에 맞는
+          최적의 방향을 제안해드립니다.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>032-000-0000</strong>
+        </p>
+
+        <p>
+          인천광역시 ○○구 ○○대로 000
+        </p>
+
+      </div>
+
+
+      <form class="contact-form reveal" id="contactForm">
+
+        <div class="form-group">
+
+          <label>NAME</label>
+
+          <input
+            type="text"
+            placeholder="이름을 입력해주세요"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>PHONE</label>
+
+          <input
+            type="tel"
+            placeholder="연락처를 입력해주세요"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>PROJECT TYPE</label>
+
+          <input
+            type="text"
+            placeholder="예: 아파트 34평"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>MESSAGE</label>
+
+          <textarea
+            placeholder="원하시는 인테리어 내용을 알려주세요."
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="form-submit"
+        >
+          무료 상담 신청하기
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">
+        INFRAME.
+      </div>
+
+      <p style="margin-top:10px;">
+        Premium Interior Design & Construction
+      </p>
+
+    </div>
+
+    <div>
+      © 2026 INFRAME INTERIOR. ALL RIGHTS RESERVED.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+  /* =====================================================
+     HEADER SCROLL
+  ===================================================== */
+
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 80) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+
+  });
+
+
+  /* =====================================================
+     SCROLL REVEAL
+  ===================================================== */
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+  const revealObserver =
+    new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("show");
+
+          revealObserver.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.12
+    });
+
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+
+
+  /* =====================================================
+     COUNTER
+  ===================================================== */
+
+  const counters =
+    document.querySelectorAll(".counter");
+
+  let counterStarted = false;
+
+  function startCounters() {
+
+    if (counterStarted) return;
+
+    counterStarted = true;
+
+    counters.forEach(counter => {
+
+      const target =
+        Number(counter.dataset.target);
+
+      let current = 0;
+
+      const increment =
+        target / 80;
+
+      const timer =
+        setInterval(() => {
+
+          current += increment;
+
+          if (current >= target) {
+
+            counter.textContent =
+              target.toLocaleString();
+
+            clearInterval(timer);
+
+          } else {
+
+            counter.textContent =
+              Math.floor(current).toLocaleString();
+
+          }
+
+        }, 20);
+
+    });
+
+  }
+
+
+  const statsSection =
+    document.querySelector(".stats");
+
+  const statsObserver =
+    new IntersectionObserver(entries => {
+
+      if (entries[0].isIntersecting) {
+
+        startCounters();
+
+        statsObserver.disconnect();
+
+      }
+
+    });
+
+  statsObserver.observe(statsSection);
+
+
+  /* =====================================================
+     SIDE NAV ACTIVE
+  ===================================================== */
+
+  const sections =
+    document.querySelectorAll("section");
+
+  const sideLinks =
+    document.querySelectorAll(".side-nav a");
+
+  const sectionObserver =
+    new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          sideLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (
+              link.getAttribute("href") ===
+              "#" + entry.target.id
+            ) {
+
+              link.classList.add("active");
+
+            }
+
+          });
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.45
+    });
+
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+
+  /* =====================================================
+     PORTFOLIO FILTER
+  ===================================================== */
+
+  const filters =
+    document.querySelectorAll(".filter");
+
+  const portfolioItems =
+    document.querySelectorAll(".portfolio-item");
+
+
+  filters.forEach(filter => {
+
+    filter.addEventListener("click", () => {
+
+      filters.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      filter.classList.add("active");
+
+      const category =
+        filter.dataset.filter;
+
+      portfolioItems.forEach(item => {
+
+        if (
+          category === "all" ||
+          item.dataset.category === category
+        ) {
+
+          item.style.display = "block";
+
+        } else {
+
+          item.style.display = "none";
+
+        }
+
+      });
+
+    });
+
+  });
+
+
+  /* =====================================================
+     REVIEW SLIDER
+  ===================================================== */
+
+  const reviews =
+    document.querySelectorAll(".review-item");
+
+  const dots =
+    document.querySelectorAll(".review-dot");
+
+  let currentReview = 0;
+
+
+  function showReview(index) {
+
+    reviews.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+      dot.classList.remove("active");
+    });
+
+    reviews[index].classList.add("active");
+
+    dots[index].classList.add("active");
+
+  }
+
+
+  dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+      currentReview = index;
+
+      showReview(currentReview);
+
+    });
+
+  });
+
+
+  setInterval(() => {
+
+    currentReview++;
+
+    if (currentReview >= reviews.length) {
+      currentReview = 0;
+    }
+
+    showReview(currentReview);
+
+  }, 5000);
+
+
+  /* =====================================================
+     CONTACT FORM
+  ===================================================== */
+
+  const contactForm =
+    document.getElementById("contactForm");
+
+
+  contactForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    alert(
+      "상담 신청이 접수되었습니다.\n\n" +
+      "실제 운영 시 이 부분을 이메일, Google Sheets, " +
+      "카카오톡 상담 또는 CRM과 연결할 수 있습니다."
+    );
+
+    contactForm.reset();
+
+  });
+
+
+  /* =====================================================
+     SMOOTH ANCHOR
+  ===================================================== */
+
+  document.querySelectorAll('a[href^="#"]')
+    .forEach(anchor => {
+
+      anchor.addEventListener("click", function(e) {
+
+        const target =
+          document.querySelector(
+            this.getAttribute("href")
+          );
+
+        if (!target) return;
+
+        e.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+
+      });
+
+    });
+
+</script>
+
+</body>
+</html>
